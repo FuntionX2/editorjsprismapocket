@@ -2,6 +2,10 @@
 	import EditorJS from '@editorjs/editorjs';
 	import Header from '@editorjs/header';
 	import Image from '@editorjs/image';
+	import {page} from '$app/stores';
+    export let data;
+	const jsonData = JSON.stringify(data.post)
+	let content = '';
 	const editor = new EditorJS({
 		holder:'editorjs',
 		tools:{
@@ -17,13 +21,14 @@
 		},
 		onReady:()=>{
 			console.log('Its ready');
+			editor.render({blocks:JSON.parse(data.post)})
 		},
 		onChange:(api,event)=>{
 			saveData();
 		}
 	})
-
-	let content = '';
+	
+	
 	function saveData(){
 		editor.save().then((outputData) => {
 			content = JSON.stringify(outputData)
@@ -32,8 +37,9 @@
 		});
 		
 	}
+	console.log(data.slug);
 </script>
-<form action="/api/post" method="POST">
+<form action="/api/edit/{data.slug}" method="POST">
 	Tittle:
 	<input type="text" name="title">
 	Tag:
