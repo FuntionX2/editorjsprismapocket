@@ -46,6 +46,6 @@
         color:red;
     }
     :global(img){
-        max-height: 500px;
+        max-height: 250px;
     }
 </style>
