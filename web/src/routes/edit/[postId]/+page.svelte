@@ -39,7 +39,7 @@
 	}
 	console.log(data.slug);
 </script>
-<form action="/api/edit/{data.slug}" method="POST">
+<form action="/api/edit/{data.slug}" method="post">
 	Tittle:
 	<input type="text" name="title">
 	Tag:
