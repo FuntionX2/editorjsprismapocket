@@ -15,6 +15,7 @@ model post {
   title     String   @db.VarChar(255)
   tags      tag[]
   content   Json
+  thumbnail String?
 }
 
 model tag {

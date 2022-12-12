@@ -8,7 +8,11 @@ export async function GET({params}){
             id:Number(params.tagId),
         },
         include:{
-            posts:true,
+            posts:{
+                select:{
+                    title:true,
+                }
+            }
         },
     })
     return new Response(JSON.stringify(getpostsbytag))
