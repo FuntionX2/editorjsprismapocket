@@ -17,5 +17,5 @@ export async function POST({params,request}){
             },
         }
     })
-    throw redirect(302,`/edit/${params.postId}`)
+    throw redirect(302,`/admin/edit/${params.postId}`)
 }

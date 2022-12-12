@@ -20,6 +20,7 @@
 		"@editorjs/header": "^2.7.0",
 		"@editorjs/image": "^2.7.1",
 		"@prisma/client": "^4.7.1",
+		"editorjs-html": "^3.4.2",
 		"pocketbase": "^0.8.3"
 	}
 }
